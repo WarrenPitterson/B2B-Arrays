@@ -1,0 +1,23 @@
+{
+  "name": "b2b-arrays",
+  "version": "1.0.0",
+  "description": "Back 2 Basics : A quick code kata around arrays, wrote in javascript, with some unit test support to ensure completion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/aidenpoulton/b2b-arrays.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/aidenpoulton/b2b-arrays/issues"
+  },
+  "homepage": "https://gitlab.com/aidenpoulton/b2b-arrays#readme",
+  "devDependencies": {
+    "jest": "^24.5.0"
+  }
+}
