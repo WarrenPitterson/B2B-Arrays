@@ -74,8 +74,8 @@ test('getTheFirst3PeopleOnly should return the first 3 people', () => {
     expect(new PeopleParser().getEveryonesNameInCommaSeperatedValue()).toBe('Aiden, Warren, Sean, Rachael, Karl, Sinead, James, Martin.');
   });
 
-  test('getTheAverageAgeOfDevelopers should return a 22.8', () => {
-    expect(new PeopleParser().getTheAverageAgeOfDevelopers()).toBe(22.8);
+  test('getTheAverageAgeOfDevelopers should return a 28.5', () => {
+    expect(new PeopleParser().getTheAverageAgeOfDevelopers()).toBe(28.5);
   });
 
   test('getDoubleEveryonesMarioKartScore should return the same array with CSV of all the scores doubled.', () => {

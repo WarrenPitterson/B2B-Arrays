@@ -42,21 +42,21 @@ const PEOPLE = [{
 
 
 //All your changes should go within the PeopleParser class to complete this kata, 
-//Don't modify the tests (unless i've wrote them wrong)
+//Don't modify the tests (unless i've wrote them wrong) thihsdophdsioguhl
 class PeopleParser {
     //Returns Rachaels age from the array
     getRachaelsAge() {
-        let rachaelsAge = '';
-            if (PEOPLE[3].age === 28) {
-                rachaelsAge = PEOPLE[3].age
-        return rachaelsAge;
+        for (let i=0; i<PEOPLE.length; i++) { 
+            let currentperson = PEOPLE[i]
+            if (currentperson.name == "Rachael")
+            return currentperson.age;
         }
-    }
+   }
+    
 
     ///Return the first 3 people, Aiden, Warren and Sean.
     getTheFirst3PeopleOnly() {
-             let people3 = PEOPLE.slice(0,3);
-             return people3;
+            return PEOPLE.slice(0,3);
         }
 
     ///Return the list of people in alphabetical order
@@ -67,12 +67,26 @@ class PeopleParser {
     ///Return everyones name concatanated one after another, split by a comma's and ending in a space.
     /// EG - Aiden, Warren, Sean, Rachael, Karl, Sinead, James, Martin.
     getEveryonesNameInCommaSeperatedValue() {
-        return [];
+        let names = ''
+        for (let i=0; i<PEOPLE.length; i++) {
+            names = names + PEOPLE[i].name + ', '
+        }
+        names = names.slice(0, -2)
+        return names + '.';
     }
 
     ///Return the avergae age of all the developers
     getTheAverageAgeOfDevelopers() {
-        return 0;
+        let averageAges = 0
+        let amountOfDevs = 0
+        for (let i=0; i<PEOPLE.length; i++) {
+            if (PEOPLE[i].profession == "Developer") {
+                amountOfDevs ++
+                averageAges = averageAges + PEOPLE[i].age
+            }
+    }
+    averageAges = averageAges / amountOfDevs;
+        return averageAges
     }
 
     ///Returns the array with everyones mariokart Skill Rating doubled.
@@ -92,12 +106,12 @@ class PeopleParser {
 }
 
 //Used to help debugging.
-new PeopleParser().getRachaelsAge();
-new PeopleParser().getTheFirst3PeopleOnly();
-new PeopleParser().listOfPeopleInAlphabeticalOrderByName();
-new PeopleParser().getEveryonesNameInCommaSeperatedValue();
-new PeopleParser().getTheAverageAgeOfDevelopers();
-new PeopleParser().getDoubleEveryonesMarioKartScore();
-new PeopleParser().getMarioKartSkillGroupByCount();
+//new PeopleParser().getRachaelsAge();
+//new PeopleParser().getTheFirst3PeopleOnly();
+//new PeopleParser().listOfPeopleInAlphabeticalOrderByName();
+//new PeopleParser().getEveryonesNameInCommaSeperatedValue();
+console.log(new PeopleParser().getTheAverageAgeOfDevelopers());
+//new PeopleParser().getDoubleEveryonesMarioKartScore();
+//new PeopleParser().getMarioKartSkillGroupByCount();
 
 module.exports = PeopleParser
