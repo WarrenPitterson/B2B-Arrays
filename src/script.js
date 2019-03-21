@@ -1,82 +1,89 @@
-function getPeople() {
-    return [{
-        name: "Aiden",
-        age: 29,
-        profession: "Developer",
-        mariokartSkillRating: 5
-    }, {
-        name: "Warren",
-        age: 29,
-        profession: "Trucker",
-        mariokartSkillRating: 4
-    }, {
-        name: "Sean",
-        age: 26,
-        profession: "Developer",
-        mariokartSkillRating: 2
-    }, {
-        name: "Rachael",
-        age: 28,
-        profession: "Project Manager",
-        mariokartSkillRating: 2
-    }, {
-        name: "Karl",
-        age: 24,
-        profession: "Developer",
-        mariokartSkillRating: 4
-    }, {
-        name: "Sinead",
-        age: 28,
-        profession: "Accountant",
-        mariokartSkillRating: 2
-    }, {
-        name: "James",
-        age: 30, //LOL
-        profession: "Merchanic",
-        mariokartSkillRating: 1
-    }, {
-        name: "Martin",
-        age: 35,
-        profession: "Developer",
-        mariokartSkillRating: 4
-    }]
+let PEOPLE = [{
+    name: "Aiden",
+    age: 29,
+    profession: "Developer",
+    mariokartSkillRating: 5
+}, {
+    name: "Warren",
+    age: 29,
+    profession: "Trucker",
+    mariokartSkillRating: 4
+}, {
+    name: "Sean",
+    age: 26,
+    profession: "Developer",
+    mariokartSkillRating: 2
+}, {
+    name: "Rachael",
+    age: 28,
+    profession: "Project Manager",
+    mariokartSkillRating: 2
+}, {
+    name: "Karl",
+    age: 24,
+    profession: "Developer",
+    mariokartSkillRating: 4
+}, {
+    name: "Sinead",
+    age: 28,
+    profession: "Accountant",
+    mariokartSkillRating: 2
+}, {
+    name: "James",
+    age: 30, //LOL
+    profession: "Merchanic",
+    mariokartSkillRating: 1
+}, {
+    name: "Martin",
+    age: 35,
+    profession: "Developer",
+    mariokartSkillRating: 4
+}]
+
+
+//All your changes should go within the PeopleParser class to complete this kata, 
+//Don't modify the tests (unless i've wrote them wrong)
+class PeopleParser {
+    //Returns Rachaels age from the array
+    getRachaelsAge() {
+        return 0;
+    }
+
+    ///Return the first 3 people, Aiden, Warren and Sean.
+    getTheFirst3PeopleOnly() {
+        return [];
+    }
+
+    ///Return the list of people in alphabetical order
+    listOfPeopleInAlphabeticalOrderByName() {
+        return [];
+    }
+
+    ///Return everyones name concatanated one after another, split by a comma's and ending in a space.
+    /// EG - Aiden, Warren, Sean, Rachael, Karl, Sinead, James, Martin.
+    getEveryonesNameInCommaSeperatedValue() {
+        return [];
+    }
+
+    ///Return the avergae age of all the developers
+    getTheAverageAgeOfDevelopers() {
+        return 0;
+    }
+
+    ///Returns the array with everyones mariokart Skill Rating doubled.
+    getDoubleEveryonesMarioKartScore() {
+        return [];
+    }
+
+    /***
+     *  Returns a new array, with the amount of people in a mariokart skill group
+     * This one is slightly harder to test, so it might be wrong, but i expect to see 
+     * [{rating : 5, count : 1}, {rating : 4, count : 3}...] */
+
+    getMarioKartSkillGroupByCount() {
+        return [];
+    }
+
 }
 
-function getRachaelsAge() {
-return 0;
-}
-
-///Return the first 3 people, Aiden, Warren and Sean.
-function getTheFirst3PeopleOnly() {
-
-}
-
-///Return the list of people in alphabetical order
-function listOfPeopleInAlphabeticalOrderByName() {
-
-}
-
-///Return everyones name concatanated one after another, split by a comma's and ending in a space.
-/// EG - Aiden, Warren, Sean, Rachael, Karl, Sinead, James, Martin.
-
-function getEveryonesNameInCommaSeperatedValue() {
-
-}
-
-///Return the avergae age of all the developers
-function getTheAverageAgeOfDevelopers() {
-
-}
-
-///Returns the array with everyones mariokart Skill Rating doubled.
-function getDoubleEveryonesMarioKartScore() {
-
-}
-
-
-module.exports = getRachaelsAge,
-getTheFirst3PeopleOnly,
-listOfPeopleInAlphabeticalOrderByName,
-getEveryonesNameInCommaSeperatedValue,
-getTheAverageAgeOfDevelopers,
-getDoubleEveryonesMarioKartScore
+module.exports = PeopleParser
