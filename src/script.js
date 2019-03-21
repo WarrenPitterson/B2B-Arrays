@@ -1,4 +1,4 @@
-let PEOPLE = [{
+const PEOPLE = [{
     name: "Aiden",
     age: 29,
     profession: "Developer",
@@ -47,6 +47,7 @@ class PeopleParser {
     //Returns Rachaels age from the array
     getRachaelsAge() {
         return 0;
+        
     }
 
     ///Return the first 3 people, Aiden, Warren and Sean.
@@ -85,5 +86,14 @@ class PeopleParser {
     }
 
 }
+
+//Used to help debugging.
+new PeopleParser().getRachaelsAge();
+new PeopleParser().getTheFirst3PeopleOnly();
+new PeopleParser().listOfPeopleInAlphabeticalOrderByName();
+new PeopleParser().getEveryonesNameInCommaSeperatedValue();
+new PeopleParser().getTheAverageAgeOfDevelopers();
+new PeopleParser().getDoubleEveryonesMarioKartScore();
+new PeopleParser().getMarioKartSkillGroupByCount();
 
 module.exports = PeopleParser
