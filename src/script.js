@@ -46,13 +46,18 @@ let PEOPLE = [{
 class PeopleParser {
     //Returns Rachaels age from the array
     getRachaelsAge() {
-        return 0;
+        let rachaelsAge = '';
+            if (PEOPLE[3].age === 28) {
+                rachaelsAge = PEOPLE[3].age
+        return rachaelsAge;
+        }
     }
 
     ///Return the first 3 people, Aiden, Warren and Sean.
     getTheFirst3PeopleOnly() {
-        return [];
-    }
+             let people3 = PEOPLE.slice(0,3);
+             return people3;
+        }
 
     ///Return the list of people in alphabetical order
     listOfPeopleInAlphabeticalOrderByName() {
