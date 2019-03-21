@@ -1,4 +1,4 @@
-const PeopleParser = require('./answers/script');
+const PeopleParser = require('./script');
 
 
 test('getRachaelsAge should return 28', () => {
