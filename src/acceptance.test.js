@@ -6,7 +6,7 @@ test('getRachaelsAge should return 28', () => {
 });
 
 test('getTheFirst3PeopleOnly should return the first 3 people', () => {
-    expect(new PeopleParser().getTheFirst3PeopleOnly()).toBe([{
+    expect(new PeopleParser().getTheFirst3PeopleOnly()).toEqual([{
         name: "Aiden",
         age: 29,
         profession: "Developer",
@@ -26,7 +26,7 @@ test('getTheFirst3PeopleOnly should return the first 3 people', () => {
   });
 
   test('listOfPeopleInAlphabeticalOrderByName should return all the people in alphabetical order', () => {
-    expect(new PeopleParser().listOfPeopleInAlphabeticalOrderByName()).toBe( [{
+    expect(new PeopleParser().listOfPeopleInAlphabeticalOrderByName()).toEqual( [{
         name: "Aiden",
         age: 29,
         profession: "Developer",
@@ -70,8 +70,8 @@ test('getTheFirst3PeopleOnly should return the first 3 people', () => {
     );
   });
 
-  test('getTheAverageAgeOfDevelopers should return a CSV of all the names.', () => {
-    expect(new PeopleParser().getTheAverageAgeOfDevelopers()).toBe('Aiden, Warren, Sean, Rachael, Karl, Sinead, James, Martin.');
+  test('getEveryonesNameInCommaSeperatedValue should return a CSV of all the names.', () => {
+    expect(new PeopleParser().getEveryonesNameInCommaSeperatedValue()).toBe('Aiden, Warren, Sean, Rachael, Karl, Sinead, James, Martin.');
   });
 
   test('getTheAverageAgeOfDevelopers should return a 22.8', () => {
@@ -79,7 +79,7 @@ test('getTheFirst3PeopleOnly should return the first 3 people', () => {
   });
 
   test('getDoubleEveryonesMarioKartScore should return the same array with CSV of all the scores doubled.', () => {
-    expect(new PeopleParser().getDoubleEveryonesMarioKartScore()).toBe([{
+    expect(new PeopleParser().getDoubleEveryonesMarioKartScore()).toEqual([{
         name: "Aiden",
         age: 29,
         profession: "Developer",
@@ -123,5 +123,5 @@ test('getTheFirst3PeopleOnly should return the first 3 people', () => {
   });
 
   test('getMarioKartSkillGroupByCount should return a new array with the counts.', () => {
-    expect(new PeopleParser().getMarioKartSkillGroupByCount()).toBe([{rating : 5, count : 1}, {rating : 4, count : 3}, {rating: 3, count : 0}, {rating: 2, count: 2},{ rating: 1, count: 1}]);
+    expect(new PeopleParser().getMarioKartSkillGroupByCount()).toEqual([{rating : 5, count : 1}, {rating : 4, count : 3}, {rating: 3, count : 0}, {rating: 2, count: 2},{ rating: 1, count: 1}]);
   });

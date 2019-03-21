@@ -1,4 +1,4 @@
-let PEOPLE = [{
+const PEOPLE = [{
     name: "Aiden",
     age: 29,
     profession: "Developer",
@@ -90,5 +90,14 @@ class PeopleParser {
     }
 
 }
+
+//Used to help debugging.
+new PeopleParser().getRachaelsAge();
+new PeopleParser().getTheFirst3PeopleOnly();
+new PeopleParser().listOfPeopleInAlphabeticalOrderByName();
+new PeopleParser().getEveryonesNameInCommaSeperatedValue();
+new PeopleParser().getTheAverageAgeOfDevelopers();
+new PeopleParser().getDoubleEveryonesMarioKartScore();
+new PeopleParser().getMarioKartSkillGroupByCount();
 
 module.exports = PeopleParser
