@@ -105,25 +105,25 @@ class PeopleParser {
      * [{rating : 5, count : 1}, {rating : 4, count : 3}...] */
 
     getMarioKartSkillGroupByCount() {
-        let rating1 = 0;
-        let rating2 = 0;
-        let rating3 = 0;
-        let rating4 = 0;
-        let rating5 = 0;
+        let count1 = 0;
+        let count2 = 0;
+        let count3 = 0;
+        let count4 = 0;
+        let count5 = 0;
         for (let i = 0; i < PEOPLE.length; i++) {
             if (PEOPLE[i].mariokartSkillRating == 1) {
-                rating1 += 1
+                count1 += 1
             } else if (PEOPLE[i].mariokartSkillRating == 2) {
-                rating2 += 1
+                count2 += 1
             } else if (PEOPLE[i].mariokartSkillRating == 3) {
-                rating3 += 1
+                count3 += 1
             } else if (PEOPLE[i].mariokartSkillRating == 4) {
-                rating4 += 1
+                count4 += 1
             } else if (PEOPLE[i].mariokartSkillRating == 5) {
-                rating5 += 1
+                count5 += 1
             }
         }
-        let ratings = [{rating1}, {rating2}, {rating3}, {rating4}, {rating5}];
+        let ratings = [{"rating" : 1, "count" :count1,  }, {"rating" : 2, "count":count2}, {"rating" : 3, "count":count3}, {"rating" : 4, "count":count4}, {"rating" : 5, "count":count5}];
         return ratings
     }
 
