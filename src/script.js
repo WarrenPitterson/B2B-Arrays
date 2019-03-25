@@ -46,29 +46,30 @@ const PEOPLE = [{
 class PeopleParser {
     //Returns Rachaels age from the array
     getRachaelsAge() {
-        for (let i=0; i<PEOPLE.length; i++) { 
+        for (let i = 0; i < PEOPLE.length; i++) {
             let currentperson = PEOPLE[i]
             if (currentperson.name == "Rachael")
-            return currentperson.age;
+                return currentperson.age;
         }
-   }
-    
+    }
+
 
     ///Return the first 3 people, Aiden, Warren and Sean.
     getTheFirst3PeopleOnly() {
-            return PEOPLE.slice(0,3);
-        }
+        return PEOPLE.slice(0, 3);
+    }
 
     ///Return the list of people in alphabetical order
     listOfPeopleInAlphabeticalOrderByName() {
-        return [];
+        return PEOPLE.sort()
     }
+
 
     ///Return everyones name concatanated one after another, split by a comma's and ending in a space.
     /// EG - Aiden, Warren, Sean, Rachael, Karl, Sinead, James, Martin.
     getEveryonesNameInCommaSeperatedValue() {
         let names = ''
-        for (let i=0; i<PEOPLE.length; i++) {
+        for (let i = 0; i < PEOPLE.length; i++) {
             names = names + PEOPLE[i].name + ', '
         }
         names = names.slice(0, -2)
@@ -79,20 +80,24 @@ class PeopleParser {
     getTheAverageAgeOfDevelopers() {
         let averageAges = 0
         let amountOfDevs = 0
-        for (let i=0; i<PEOPLE.length; i++) {
+        for (let i = 0; i < PEOPLE.length; i++) {
             if (PEOPLE[i].profession == "Developer") {
-                amountOfDevs ++
+                amountOfDevs++
                 averageAges = averageAges + PEOPLE[i].age
             }
-    }
-    averageAges = averageAges / amountOfDevs;
+        }
+        averageAges = averageAges / amountOfDevs;
         return averageAges
     }
 
     ///Returns the array with everyones mariokart Skill Rating doubled.
     getDoubleEveryonesMarioKartScore() {
-        return [];
+        for (let i = 0; i < PEOPLE.length; i++) {
+            PEOPLE[i].mariokartSkillRating = PEOPLE[i].mariokartSkillRating * 2
+        }
+        return PEOPLE;
     }
+
 
     /***
      *  Returns a new array, with the amount of people in a mariokart skill group
@@ -100,18 +105,38 @@ class PeopleParser {
      * [{rating : 5, count : 1}, {rating : 4, count : 3}...] */
 
     getMarioKartSkillGroupByCount() {
-        return [];
+        let rating1 = 0;
+        let rating2 = 0;
+        let rating3 = 0;
+        let rating4 = 0;
+        let rating5 = 0;
+        for (let i = 0; i < PEOPLE.length; i++) {
+            if (PEOPLE[i].mariokartSkillRating == 1) {
+                rating1 += 1
+            } else if (PEOPLE[i].mariokartSkillRating == 2) {
+                rating2 += 1
+            } else if (PEOPLE[i].mariokartSkillRating == 3) {
+                rating3 += 1
+            } else if (PEOPLE[i].mariokartSkillRating == 4) {
+                rating4 += 1
+            } else if (PEOPLE[i].mariokartSkillRating == 5) {
+                rating5 += 1
+            }
+        }
+        let ratings = [{rating1}, {rating2}, {rating3}, {rating4}, {rating5}];
+        return ratings
     }
 
 }
 
-//Used to help debugging.
-//new PeopleParser().getRachaelsAge();
-//new PeopleParser().getTheFirst3PeopleOnly();
-//new PeopleParser().listOfPeopleInAlphabeticalOrderByName();
-//new PeopleParser().getEveryonesNameInCommaSeperatedValue();
-console.log(new PeopleParser().getTheAverageAgeOfDevelopers());
-//new PeopleParser().getDoubleEveryonesMarioKartScore();
-//new PeopleParser().getMarioKartSkillGroupByCount();
 
-module.exports = PeopleParser
+    //Used to help debugging.
+    //new PeopleParser().getRachaelsAge();
+    //new PeopleParser().getTheFirst3PeopleOnly();
+    //new PeopleParser().listOfPeopleInAlphabeticalOrderByName();
+    //new PeopleParser().getEveryonesNameInCommaSeperatedValue();
+    //new PeopleParser().getTheAverageAgeOfDevelopers();
+    //new PeopleParser().getDoubleEveryonesMarioKartScore();
+    console.log(new PeopleParser().getMarioKartSkillGroupByCount());
+
+    module.exports = PeopleParser
